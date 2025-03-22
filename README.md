@@ -43,14 +43,14 @@ Transforme seus processos em **serviços integráveis**, permitindo que outras a
 
 </details>
 
-<details>
-
-<summary><ins>Utilizando o Job Execution como Interface</ins></summary>
-
 ### Utilizando o Job Execution como Interface
 
 > [!TIP]
 > Crie **interfaces customizadas, interativas e inteligentes** utilizando **HTML, CSS e JavaScript** dentro do JES. Isso permite a construção de dashboards, formulários interativos e aplicações personalizadas para manipulação de dados diretamente na plataforma SAS.
+
+<details>
+
+<summary><ins>Mostrar</ins></summary>
 
 [Veja o tópico clicando aqui!](/topicos/jobexec-como-api.md)
 
