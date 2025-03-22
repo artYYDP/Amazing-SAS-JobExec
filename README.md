@@ -1,6 +1,6 @@
 ![Banner](/images/Amazing_SAS_Job_Execution.png) <!-- Adicione o link do banner aqui -->
 
-# 🚀 SAS Sem Limites <h3>Construindo Soluções Analíticas Fora da Caixa com o SAS Job Execution</h3>
+# <h2>SAS Sem Limites: Construindo Soluções Analíticas Fora da Caixa com o SAS Job Execution</h2>
 
 ## Índice
 
@@ -60,5 +60,4 @@ Agradecimentos especiais também à [**Vert Analytics**](https://www.vertanalyti
 
 ## Referências
 
-- [Using URL Parameters to View a Report](https://documentation.sas.com/doc/pt-br/vacdc/v_019/vavwr/p0l4zt68r3id4wn1fk3y3kconfg4.htm)
 - [Working with the SAS Job Execution Web Application](https://documentation.sas.com/doc/en/jobexeccdc/v_004/jobexecug/p1gukmrin5zv1mn1rvb6afi57b88.htm)
