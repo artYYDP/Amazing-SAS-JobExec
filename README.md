@@ -1,5 +1,12 @@
 ![Banner](/images/Amazing_SAS_Job_Execution.png) <!-- Adicione o link do banner aqui -->
 
+<div align="center">
+<br />
+
+[![License](https://img.shields.io/github/license/artYYDP/amazing-sas-jobexec.svg?style=flat-square)](LICENSE)
+
+</div>
+
 # <h2>SAS Sem Limites: Construindo Soluções Analíticas Fora da Caixa com o SAS Job Execution</h2>
 
 ## Índice
