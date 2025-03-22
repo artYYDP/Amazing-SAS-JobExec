@@ -31,17 +31,34 @@ Para acompanhar este repositório e aplicar os conceitos apresentados na palestr
 
 ## Como o SAS Job Execution pode ser utilizado?
 
+<details>
+
+<summary><ins>Utilizando o Job Execution como API</ins></summary>
+
 ### Utilizando o Job Execution como API
 
 Transforme seus processos em **serviços integráveis**, permitindo que outras aplicações consumam e interajam com seus fluxos de trabalho no SAS. Isso possibilita a automação de análises, geração de relatórios dinâmicos e integração com diferentes sistemas.
 
 [Veja o tópico clicando aqui!](/topicos/jobexec-como-api.md)
 
+</details>
+
+<details>
+
+<summary><ins>Utilizando o Job Execution como Interface</ins></summary>
+
 ### Utilizando o Job Execution como Interface
 
-Crie **interfaces customizadas, interativas e inteligentes** utilizando **HTML, CSS e JavaScript** dentro do JES. Isso permite a construção de dashboards, formulários interativos e aplicações personalizadas para manipulação de dados diretamente na plataforma SAS.
+> [!TIP]
+> Crie **interfaces customizadas, interativas e inteligentes** utilizando **HTML, CSS e JavaScript** dentro do JES. Isso permite a construção de dashboards, formulários interativos e aplicações personalizadas para manipulação de dados diretamente na plataforma SAS.
 
 [Veja o tópico clicando aqui!](/topicos/jobexec-como-api.md)
+
+</details>
+
+<details>
+
+<summary><ins>Utilizando o Job Execution como Fluxo de Trabalho</ins></summary>
 
 ### Utilizando o Job Execution como Fluxo de Trabalho
 
@@ -49,15 +66,34 @@ Automatize **processos analíticos complexos**, conectando múltiplas tarefas e 
 
 [Veja o tópico clicando aqui!](/topicos/jobexec-como-api.md)
 
+</details>
+
 ## Autor, Contribuição e Agradecimentos
 
-- 🚀 [**Arthur Diego Pereira**](https://github.com/artYYDP) – Idealizador dos processos em Job Execution e criador deste repositório.
-- 💡 **Geiziane Oliveira** – Mentora que me ajudou a destravar o código SAS e me apaixonar pela linguagem.
-- 🎨 **Matheus Cougo** – Analista de UI/UX que sempre me incentivou a ir além da minha capacidade.
-- 🔧 **Rafhael Martins** – Pela ajuda na criação de pop-ups com Job Execution dentro do SAS Visual Analytics.
+- [**Arthur Diego Pereira**](https://github.com/artYYDP) – Idealizador dos processos em Job Execution e criador deste repositório.
+- **Geiziane Oliveira** – Mentora que me ajudou a destravar o código SAS e me apaixonar pela linguagem.
+- **Matheus Cougo** – Analista de UI/UX que sempre me incentivou a ir além da minha capacidade.
+- **Rafhael Martins** – Pela ajuda na criação de pop-ups com Job Execution dentro do SAS Visual Analytics.
 
-Agradecimentos especiais também à [**Vert Analytics**](https://www.vertanalytics.com.br), empresa na qual trabalho e sou muito feliz, e a todos os participantes da palestra! 🚀
+Agradecimentos especiais também à [**Vert Analytics**](https://www.vertanalytics.com.br), empresa na qual trabalho e sou muito grato por fazer parte desse time de especialistas, e a todos os participantes da palestra que disponibilizaram um pouco do seu tempo para aprender um pouco mais sobre SAS!
 
 ## Referências
 
 - [Working with the SAS Job Execution Web Application](https://documentation.sas.com/doc/en/jobexeccdc/v_004/jobexecug/p1gukmrin5zv1mn1rvb6afi57b88.htm)
+
+<!--
+> [!NOTE]
+> Useful information that users should know, even when skimming content.
+
+> [!TIP]
+> Helpful advice for doing things better or more easily.
+
+> [!IMPORTANT]
+> Key information users need to know to achieve their goal.
+
+> [!WARNING]
+> Urgent info that needs immediate user attention to avoid problems.
+
+> [!CAUTION]
+> Advises about risks or negative outcomes of certain actions.
+-->
