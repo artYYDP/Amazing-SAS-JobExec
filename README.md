@@ -31,23 +31,17 @@ Para acompanhar este repositório e aplicar os conceitos apresentados na palestr
 
 ## Como o SAS Job Execution pode ser utilizado?
 
-### Utilizando o Job Execution como API
+### [Utilizando o Job Execution como API](/topicos/jobexec-como-api.md)
 
 Transforme seus processos em **serviços integráveis**, permitindo que outras aplicações consumam e interajam com seus fluxos de trabalho no SAS. Isso possibilita a automação de análises, geração de relatórios dinâmicos e integração com diferentes sistemas.
 
-[Veja o tópico clicando aqui!](/topicos/jobexec-como-api.md)
-
-### Utilizando o Job Execution como Interface
+### [Utilizando o Job Execution como Interface](/topicos/jobexec-como-api.md)
 
 Crie **interfaces customizadas, interativas e inteligentes** utilizando **HTML, CSS e JavaScript** dentro do JES. Isso permite a construção de dashboards, formulários interativos e aplicações personalizadas para manipulação de dados diretamente na plataforma SAS.
 
-[Veja o tópico clicando aqui!](/topicos/jobexec-como-api.md)
-
-### Utilizando o Job Execution como Fluxo de Trabalho
+### [Utilizando o Job Execution como Fluxo de Trabalho](/topicos/jobexec-como-api.md)
 
 Automatize **processos analíticos complexos**, conectando múltiplas tarefas e garantindo a execução sequencial ou paralela de scripts SAS. Essa abordagem facilita a orquestração de fluxos de dados e melhora a eficiência operacional.
-
-[Veja o tópico clicando aqui!](/topicos/jobexec-como-api.md)
 
 ## Autor, Contribuição e Agradecimentos
 
