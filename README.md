@@ -3,7 +3,7 @@
 <div align="center">
 <br />
 
-[![License](https://img.shields.io/github/license/artYYDP/amazing-sas-jobexec.svg?style=flat-square)](LICENSE)
+[![License](https://img.shields.io/github/license/artYYDP/Amazing-SAS-JobExec?style=flat-square)](LICENSE)
 
 </div>
 
