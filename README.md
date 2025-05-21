@@ -62,6 +62,8 @@ Agradecimentos especiais também à [**Vert Analytics**](https://www.vertanalyti
 
 ## Referências
 
+- [Comparing the SAS Job Execution Web Application, SAS Studio and jobExecution REST API endpoint](https://communities.sas.com/t5/SAS-Communities-Library/Comparing-the-SAS-Job-Execution-Web-Application-SAS-Studio-and/ta-p/966761)
+- [Running Your SAS Code from the Web Using the SAS Job Execution Web Application](https://communities.sas.com/t5/SAS-Communities-Library/Running-Your-SAS-Code-from-the-Web-Using-the-SAS-Job-Execution/ta-p/666202)
 - [Working with the SAS Job Execution Web Application](https://documentation.sas.com/doc/en/jobexeccdc/v_004/jobexecug/p1gukmrin5zv1mn1rvb6afi57b88.htm)
 
 <!--

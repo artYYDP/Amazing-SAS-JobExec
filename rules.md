@@ -2,8 +2,6 @@
 
 Este repositório reúne boas práticas e requisitos técnicos para desenvolvimento de aplicações com o SAS Job Execution Web Application, visando segurança, compatibilidade e padronização em ambientes corporativos.
 
----
-
 ## ✅ Requisitos para execução
 
 ### 1. Ambiente com HTTPS e certificado válido
@@ -29,7 +27,7 @@ Este repositório reúne boas práticas e requisitos técnicos para desenvolvime
 <link rel="stylesheet" href="style.css">
 ```
 
-- **Solução:** é necessário utilizar a **URI** gerada pelo SAS e adicionar o <code>/content</code> no final do arquivo. Exemplo:
+- **Solução:** é necessário utilizar a **URI** gerada pelo SAS e adicionar o `/content` no final do arquivo. Exemplo:
 
 ```html
 <script src="/file/file/{URI}/content"></script>
@@ -37,7 +35,7 @@ Este repositório reúne boas práticas e requisitos técnicos para desenvolvime
 ```
 
 > [!TIP]
-> Caso você não saiba como fazer isso, [clique aqui (em breve)](about:blank) e veja o tutorial!
+> Caso você não saiba como obter a URI de um arquivo, [clique aqui (em breve)](about:blank) para acessar o tutorial completo!
 
 ### 5. Lógica de validação e rastreamento
 
