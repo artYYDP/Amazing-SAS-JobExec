@@ -1,60 +1,42 @@
-// Defina os links dos relatórios no início
-const links = {
-	// Links das páginas
-	"link01": "about:blank",
-	"link02": "about:blank",
-	"link03": "about:blank",
-	"link04": "about:blank",
-	"link05": "about:blank",
-	
-	// Sublinks das páginas
-	"sublink01": "about:blank",
-	"sublink02": "about:blank",
-	"sublink03": "about:blank",
-	"sublink04": "about:blank",
-	
-	// Links dos icons
-	"link-icon01": "/files/files/1d749bbf-be71-4411-9fcf-f0d6ac368f76/content",
-	"link-icon02": "/files/files/85e60962-98f0-4e7f-b3e5-da51916e49c8/content",
-	"link-icon03": "/files/files/129658b7-e2dd-4fe2-842f-0b7ceae0bbc7/content",
-	"link-icon04": "/files/files/2f5467aa-bbbf-4efc-a853-ee672fd6f3bd/content",
-	"link-icon05": "/files/files/b83b7043-35a3-4819-9dff-70d670729404/content"
-	
+// Mapeamento dos paths 'd' dos ícones
+const iconsPaths = {
+	"link-icon01": "M9 0C9 0 3.4326 4.806 0.3213 7.4088C0.222254 7.49503 0.14246 7.60113 0.0871042 7.72021C0.0317489 7.8393 0.00207118 7.9687 0 8.1C0 8.3387 0.0948211 8.56761 0.263604 8.7364C0.432387 8.90518 0.661305 9 0.9 9H2.7V15.3C2.7 15.5387 2.79482 15.7676 2.9636 15.9364C3.13239 16.1052 3.36131 16.2 3.6 16.2H6.3C6.53869 16.2 6.76761 16.1052 6.9364 15.9364C7.10518 15.7676 7.2 15.5387 7.2 15.3V11.7H10.8V15.3C10.8 15.5387 10.8948 15.7676 11.0636 15.9364C11.2324 16.1052 11.4613 16.2 11.7 16.2H14.4C14.6387 16.2 14.8676 16.1052 15.0364 15.9364C15.2052 15.7676 15.3 15.5387 15.3 15.3V9H17.1C17.3387 9 17.5676 8.90518 17.7364 8.7364C17.9052 8.56761 18 8.3387 18 8.1C17.9987 7.96619 17.9671 7.83441 17.9073 7.71466C17.8476 7.59491 17.7614 7.49031 17.6553 7.4088C14.5656 4.806 9 0 9 0Z",
+	"link-icon02": "M9 9.5C7.7625 9.5 6.70312 9.05937 5.82187 8.17812C4.94062 7.29687 4.5 6.2375 4.5 5C4.5 3.7625 4.94062 2.70312 5.82187 1.82188C6.70312 0.940625 7.7625 0.5 9 0.5C10.2375 0.5 11.2969 0.940625 12.1781 1.82188C13.0594 2.70312 13.5 3.7625 13.5 5C13.5 6.2375 13.0594 7.29687 12.1781 8.17812C11.2969 9.05937 10.2375 9.5 9 9.5ZM0 16.25V15.35C0 14.7125 0.16425 14.1267 0.49275 13.5927C0.82125 13.0587 1.257 12.6507 1.8 12.3687C2.9625 11.7875 4.14375 11.3517 5.34375 11.0615C6.54375 10.7712 7.7625 10.6257 9 10.625C10.2375 10.6242 11.4562 10.7697 12.6562 11.0615C13.8562 11.3532 15.0375 11.789 16.2 12.3687C16.7437 12.65 17.1799 13.058 17.5084 13.5927C17.8369 14.1275 18.0007 14.7132 18 15.35V16.25C18 16.8687 17.7799 17.3986 17.3396 17.8396C16.8994 18.2806 16.3695 18.5007 15.75 18.5H2.25C1.63125 18.5 1.10175 18.2799 0.6615 17.8396C0.22125 17.3994 0.00075 16.8695 0 16.25Z",
+	"link-icon03": "M0 14.9615V18.0015C0 18.2815 0.22 18.5015 0.5 18.5015H3.54C3.67 18.5015 3.8 18.4515 3.89 18.3515L14.81 7.44147L11.06 3.69147L0.15 14.6015C0.0500001 14.7015 0 14.8215 0 14.9615ZM17.71 4.54147C17.8027 4.44895 17.8762 4.33907 17.9264 4.21809C17.9766 4.09712 18.0024 3.96744 18.0024 3.83647C18.0024 3.7055 17.9766 3.57582 17.9264 3.45484C17.8762 3.33387 17.8027 3.22398 17.71 3.13147L15.37 0.791467C15.2775 0.698764 15.1676 0.625216 15.0466 0.575035C14.9257 0.524853 14.796 0.499023 14.665 0.499023C14.534 0.499023 14.4043 0.524853 14.2834 0.575035C14.1624 0.625216 14.0525 0.698764 13.96 0.791467L12.13 2.62147L15.88 6.37147L17.71 4.54147Z",
+	"link-icon04_1": "M4.15385 2.96169C4.15385 3.51252 3.93503 4.0408 3.54553 4.4303C3.15603 4.81979 2.62776 5.03861 2.07692 5.03861C1.52609 5.03861 0.997815 4.81979 0.608317 4.4303C0.218818 4.0408 0 3.51252 0 2.96169C0 2.41085 0.218818 1.88258 0.608317 1.49308C0.997815 1.10358 1.52609 0.884766 2.07692 0.884766C2.62776 0.884766 3.15603 1.10358 3.54553 1.49308C3.93503 1.88258 4.15385 2.41085 4.15385 2.96169ZM4.15385 8.50015C4.15385 9.05098 3.93503 9.57926 3.54553 9.96876C3.15603 10.3583 2.62776 10.5771 2.07692 10.5771C1.52609 10.5771 0.997815 10.3583 0.608317 9.96876C0.218818 9.57926 0 9.05098 0 8.50015C0 7.94932 0.218818 7.42104 0.608317 7.03154C0.997815 6.64205 1.52609 6.42323 2.07692 6.42323C2.62776 6.42323 3.15603 6.64205 3.54553 7.03154C3.93503 7.42104 4.15385 7.94932 4.15385 8.50015ZM4.15385 14.0386C4.15385 14.5894 3.93503 15.1177 3.54553 15.5072C3.15603 15.8967 2.62776 16.1155 2.07692 16.1155C1.52609 16.1155 0.997815 15.8967 0.608317 15.5072C0.218818 15.1177 0 14.5894 0 14.0386C0 13.4878 0.218818 12.9595 0.608317 12.57C0.997815 12.1805 1.52609 11.9617 2.07692 11.9617C2.62776 11.9617 3.15603 12.1805 3.54553 12.57C3.93503 12.9595 4.15385 13.4878 4.15385 14.0386Z",
+	"link-icon04_2": "M5.53857 2.96176C5.53857 2.59454 5.68445 2.24236 5.94412 1.98269C6.20378 1.72303 6.55597 1.57715 6.92319 1.57715H16.6155C16.9827 1.57715 17.3349 1.72303 17.5946 1.98269C17.8542 2.24236 18.0001 2.59454 18.0001 2.96176C18.0001 3.32899 17.8542 3.68117 17.5946 3.94083C17.3349 4.2005 16.9827 4.34638 16.6155 4.34638H6.92319C6.55597 4.34638 6.20378 4.2005 5.94412 3.94083C5.68445 3.68117 5.53857 3.32899 5.53857 2.96176ZM5.53857 8.50023C5.53857 8.133 5.68445 7.78082 5.94412 7.52115C6.20378 7.26149 6.55597 7.11561 6.92319 7.11561H16.6155C16.9827 7.11561 17.3349 7.26149 17.5946 7.52115C17.8542 7.78082 18.0001 8.133 18.0001 8.50023C18.0001 8.86745 17.8542 9.21963 17.5946 9.4793C17.3349 9.73896 16.9827 9.88484 16.6155 9.88484H6.92319C6.55597 9.88484 6.20378 9.73896 5.94412 9.4793C5.68445 9.21963 5.53857 8.86745 5.53857 8.50023ZM5.53857 14.0387C5.53857 13.6715 5.68445 13.3193 5.94412 13.0596C6.20378 12.8 6.55597 12.6541 6.92319 12.6541H16.6155C16.9827 12.6541 17.3349 12.8 17.5946 13.0596C17.8542 13.3193 18.0001 13.6715 18.0001 14.0387C18.0001 14.4059 17.8542 14.7581 17.5946 15.0178C17.3349 15.2774 16.9827 15.4233 16.6155 15.4233H6.92319C6.55597 15.4233 6.20378 15.2774 5.94412 15.0178C5.68445 14.7581 5.53857 14.4059 5.53857 14.0387Z",
+	"link-icon05": "M7.18425 0.498047C6.05982 0.498648 4.95122 0.763032 3.94754 1.26995C2.94386 1.77686 2.0731 2.51217 1.40525 3.41678C0.7374 4.32138 0.291083 5.37005 0.102172 6.47849C-0.086738 7.58694 -0.0129727 8.72424 0.31754 9.79899C0.648052 10.8737 1.22609 11.856 2.0052 12.6667C2.78431 13.4775 3.74276 14.0941 4.80351 14.4672C5.86426 14.8402 6.99773 14.9591 8.11281 14.8145C9.22789 14.6698 10.2935 14.2656 11.224 13.6343L15.6662 18.0729C15.7896 18.2053 15.9384 18.3115 16.1037 18.3852C16.269 18.4589 16.4475 18.4985 16.6285 18.5017C16.8094 18.5049 16.9892 18.4716 17.157 18.4038C17.3248 18.336 17.4773 18.2351 17.6052 18.1071C17.7332 17.9792 17.8341 17.8267 17.9019 17.6589C17.9697 17.4911 18.003 17.3113 17.9998 17.1303C17.9966 16.9494 17.957 16.7709 17.8833 16.6056C17.8097 16.4403 17.7035 16.2915 17.571 16.1681L13.1324 11.7258C13.8667 10.6451 14.2926 9.3846 14.3641 8.07993C14.4357 6.77526 14.1503 5.47576 13.5387 4.32114C12.927 3.16653 12.0122 2.20048 10.8925 1.52687C9.77292 0.853263 8.49088 0.497573 7.18425 0.498047ZM2.69169 7.68614C2.69169 6.49464 3.16501 5.35194 4.00753 4.50942C4.85005 3.6669 5.99275 3.19358 7.18425 3.19358C8.37575 3.19358 9.51845 3.6669 10.361 4.50942C11.2035 5.35194 11.6768 6.49464 11.6768 7.68614C11.6768 8.87764 11.2035 10.0203 10.361 10.8629C9.51845 11.7054 8.37575 12.1787 7.18425 12.1787C5.99275 12.1787 4.85005 11.7054 4.00753 10.8629C3.16501 10.0203 2.69169 8.87764 2.69169 7.68614Z",
+	"link-icon06": "M4.82233 11.8583V18.58C4.82233 18.9819 4.66265 19.3674 4.37843 19.6517C4.0942 19.9359 3.70871 20.0956 3.30675 20.0956H1.52545C1.3256 20.0969 1.12746 20.0586 0.942443 19.983C0.757427 19.9074 0.589188 19.796 0.447409 19.6552C0.30563 19.5143 0.193113 19.3468 0.116333 19.1623C0.0395533 18.9777 2.79514e-05 18.7798 3.2165e-05 18.58V11.8583C-0.00127528 11.6576 0.0372882 11.4587 0.113485 11.273C0.189681 11.0873 0.301993 10.9187 0.443903 10.7767C0.585813 10.6348 0.754493 10.5225 0.940156 10.4463C1.12582 10.3701 1.32477 10.3316 1.52545 10.3329H3.30675C3.50661 10.3329 3.7045 10.3724 3.88902 10.4492C4.07354 10.526 4.24106 10.6385 4.38192 10.7802C4.52279 10.922 4.63422 11.0903 4.7098 11.2753C4.78538 11.4603 4.82363 11.6584 4.82233 11.8583ZM11.4161 2.43021V18.58C11.4161 18.7798 11.3766 18.9777 11.2998 19.1623C11.223 19.3468 11.1105 19.5143 10.9687 19.6552C10.8269 19.796 10.6587 19.9074 10.4737 19.983C10.2887 20.0586 10.0905 20.0969 9.89067 20.0956H8.10937C7.7065 20.0956 7.31999 19.9362 7.0342 19.6523C6.74841 19.3683 6.58654 18.9828 6.58395 18.58V2.43021C6.58653 2.02644 6.74807 1.63994 7.03358 1.35442C7.3191 1.06891 7.7056 0.907365 8.10937 0.904785H9.89067C10.2952 0.904785 10.6832 1.0655 10.9693 1.35157C11.2554 1.63764 11.4161 2.02564 11.4161 2.43021ZM18 7.52806V18.58C18 18.9819 17.8403 19.3674 17.5561 19.6517C17.2719 19.9359 16.8864 20.0956 16.4844 20.0956H14.7031C14.5033 20.0969 14.3051 20.0586 14.1201 19.983C13.9351 19.9074 13.7669 19.796 13.6251 19.6552C13.4833 19.5143 13.3708 19.3468 13.294 19.1623C13.2172 18.9777 13.1777 18.7798 13.1777 18.58V7.52806C13.1777 7.32774 13.2172 7.12938 13.2938 6.94431C13.3705 6.75924 13.4828 6.59108 13.6245 6.44943C13.7661 6.30778 13.9343 6.19542 14.1194 6.11876C14.3044 6.0421 14.5028 6.00264 14.7031 6.00264H16.5238C16.9198 6.01542 17.2952 6.18176 17.5707 6.46646C17.8463 6.75116 18.0002 7.13188 18 7.52806Z"
 };
+
+document.addEventListener("DOMContentLoaded", () => {
+	// Atualiza os hrefs dinâmicos
+	const anchors = document.querySelectorAll('a[href^="link"]');
+	anchors.forEach(anchor => {
+		const key = anchor.getAttribute("href").replace("&", "");
+		if(links[key]) {
+			anchor.href = links[key];
+		}
+	});
+
+	// Atualiza os paths dos ícones SVG
+	for(const key in iconsPaths) {
+		const pathEl = document.getElementById(`icon-path-${key}`);
+		if(pathEl) {
+			pathEl.setAttribute("d", iconsPaths[key]);
+		}
+	}
+});
 
 // Substituir os links dinâmicamente
 document.addEventListener("DOMContentLoaded", function () {
 	// Substituir os links dos relatórios no HTML
-	const link01 = document.querySelector('a[href="&link01"]');
-	const link02 = document.querySelector('a[href="&link02"]');
-	const link03 = document.querySelector('a[href="&link03"]');
-	const link04 = document.querySelector('a[href="&link04"]');
-	const link05 = document.querySelector('a[href="&link05"]');
-	const sublink01 = document.querySelector('a[href="&sublink01"]');
-	const sublink02 = document.querySelector('a[href="&sublink02"]');
-	const sublink03 = document.querySelector('a[href="&sublink03"]');
-	const sublink04 = document.querySelector('a[href="&sublink04"]');
-	const linkicon01 = document.querySelector('img[src="&link-icon01"]');
-	const linkicon02 = document.querySelector('img[src="&link-icon02"]');
-	const linkicon03 = document.querySelector('img[src="&link-icon03"]');
-	const linkicon04 = document.querySelector('img[src="&link-icon04"]');
-	const linkicon05 = document.querySelector('img[src="&link-icon05"]');
-	
-	// Diretamente altera os atributos
-	link01.href = links["link01"];
-	link02.href = links["link02"];
-	link03.href = links["link03"];
-	link04.href = links["link04"];
-	link05.href = links["link05"];
-	sublink01.href = links["sublink01"];
-	sublink02.href = links["sublink02"];
-	sublink03.href = links["sublink03"];
-	sublink04.href = links["sublink04"];
-	linkicon01.src = links["link-icon01"];
-	linkicon02.src = links["link-icon02"];
-	linkicon03.src = links["link-icon03"];
-	linkicon04.src = links["link-icon04"];
-	linkicon05.src = links["link-icon05"];
+	const link01 = document.querySelector('a[href="link01"]');
+	const link02 = document.querySelector('a[href="link02"]');
+	const link03 = document.querySelector('a[href="link03"]');
+	const link04 = document.querySelector('a[href="link04"]');
+	const link05 = document.querySelector('a[href="link05"]');
+	const link06 = document.querySelector('a[href="link06"]');
 });
 
 // Função para alternar o estado do menu lateral (aberto / colapsado)
@@ -63,119 +45,46 @@ function toggleMenu() {
 	const sidebar = document.getElementById('sidebar');
 	const menuIcon = document.querySelector('.menu-icon');
 	const isMobile = window.innerWidth <= 768;
-	const dashboardSubmenu = document.getElementById("dashboard-submenu");
-	const icon = document.getElementById("dashboard-icon");
-	
+
 	// Alterna entre abrir e fechar o menu conforme o dispositivo (mobile ou desktop)
 	if (isMobile) {
 		sidebar.classList.toggle('open');
 	} else {
 		sidebar.classList.toggle('collapsed');
 	}
-	
+
 	// Alterna a classe 'rotated' no ícone do menu
 	menuIcon.classList.toggle('rotated');
-	
-	// Sempre esconde o submenu ao alternar o menu principal
-	dashboardSubmenu.style.display = "none";
-	
 }
 
 // Verifica quando a tela é redimensionada
 window.addEventListener('resize', function () {
 	const sidebar = document.getElementById('sidebar');
 	const isMobile = window.innerWidth <= 768;
-	
+
 	if (!isMobile) {
 		sidebar.classList.remove('open');
 		sidebar.classList.add('collapsed');
 	}
 });
 
-// Função para alternar a exibição de um submenu
-function toggleSubmenu(submenuId, iconId) {
-	// Seleciona o submenu e o ícone correspondente
-	const submenu = document.getElementById(submenuId);
-	const icon = document.getElementById(iconId);
-	
-	// Verifica se o submenu está visível
-	if (submenu.style.display === "block") {
-		// Se estiver visível, oculta o submenu e altera o ícone para fechado
-		submenu.style.display = "none";
-		icon.src = "/files/files/b534d2bd-8be5-4eb0-8cc0-e82c359499ab/content";
-	} else {
-		// Se estiver oculto, exibe o submenu e altera o ícone para aberto
-		submenu.style.display = "block";
-		icon.src = "/files/files/828d9e9b-c7a7-4a19-873d-fffc204d0d12/content";
-	}
-}
-
-// Seleciona todos os links dentro dos itens do submenu
-document.addEventListener("DOMContentLoaded", function () {
-	const submenuItems = document.querySelectorAll("#dashboard-submenu .menu-item a");
-	
-	// Adiciona um evento de clique para cada item do submenu 
-	submenuItems.forEach(item => {
-		item.addEventListener("click", function () {
-			// Seleciona o submenu e o ícone do dashboard 
-			const submenu = document.getElementById("dashboard-submenu");
-			const icon = document.getElementById("dashboard-icon");
-			
-			// Oculta o submenu ao clicar em um item 
-			submenu.style.display = "none";
-			
-			// Altera a imagem do ícone para representar que o submenu está fechado
-			icon.src = "/files/files/b534d2bd-8be5-4eb0-8cc0-e82c359499ab/content";
-		});
-	});
-});
-
-// Seleciona as divs do menu principal e do submenu
-document.addEventListener("DOMContentLoaded", function () {
-	const dashboardMenu = document.getElementById("dashboard-menu");
-	const dashboardSubmenu = document.getElementById("dashboard-submenu");
-	const icon = document.getElementById("dashboard-icon");
-	
-	// Função que verifica se o menu principal NÃO está ativo, então esconde o submenu
-	function checkSubmenuVisibility() {
-		if (!dashboardMenu.classList.contains("active")) {
-			dashboardSubmenu.style.display = "none";
-			icon.src = "/files/files/4b4aacd1-e118-4143-81db-6d1328f684be/content";
-		}
-	}
-	
-	// Sempre que houver um clique na página, verifica a visibilidade do submenu
-	document.addEventListener("click", function () {
-		checkSubmenuVisibility();
-	});
-});
-
 // Alterna a classe "active" no menu e atualiza o título
 document.querySelectorAll(".menu-item").forEach(item => {
 	item.addEventListener("click", function() {
-		// Remove a classe "active" de todos os itens do menu 
+		// Remove a classe "active" de todos os itens do menu
 		document.querySelectorAll(".menu-item").forEach(el => el.classList.remove("active"));
-		
-		// Adiciona a classe "active" ao item clicado  
+
+		// Adiciona a classe "active" ao item clicado
 		this.classList.add("active");
-		
-		// Verifica se o item pertence a um submenu 
+
+		// Verifica se o item pertence a um submenu
 		const isSubmenu = this.closest(".submenu");
 		const titleText = this.querySelector("span").innerText;
-		
-		// Seleciona os elementos do título 
+
+		// Seleciona os elementos do título
 		const aggregation = document.getElementById('title-aggregation');
 		const mainTitle = document.getElementById('main-title').innerText;
-		
-		// Atualiza o título de acordo com o menu selecionado
-		if (isSubmenu) {
-			const parentMenu = this.closest('.menu-item');
-			const parentMenuText = parentMenu.querySelector("span").innerText;
-			aggregation.innerText = `| Dashboard: ${titleText}`;
-		} else {
-			aggregation.innerText = `| ${titleText}`;
-		}
-		
+
 		// Se o item contiver um link, dispara o clique automaticamente
 		const link = this.querySelector("a");
 		if (link) {
@@ -186,9 +95,9 @@ document.querySelectorAll(".menu-item").forEach(item => {
 
 // Alterna o menu lateral no mobile
 function toggleMobileMenu() {
-	// Alterna a classe 'open' no menu lateral (sidebar) 
+	// Alterna a classe 'open' no menu lateral (sidebar)
 	document.getElementById('sidebar').classList.toggle('open');
-	
+
 	// Alterna a classe 'rotated' no botão do menu para indicar a ação
 	document.querySelector('.menu-toggle').classList.toggle('rotated');
 }
@@ -197,10 +106,10 @@ function toggleMobileMenu() {
 document.addEventListener("DOMContentLoaded", function () {
 	// Seleciona todos os links dentro do menu
 	const menuItems = document.querySelectorAll(".menu a");
-	
-	// Seleciona o elemento do menu que pode ser colapsado 
+
+	// Seleciona o elemento do menu que pode ser colapsado
 	const collapseMenu = document.querySelector(".collapse-menu");
-	
+
 	// Adiciona um evento de clique para cada link do menu
 	menuItems.forEach(item => {
 		item.addEventListener("click", function () {
@@ -216,7 +125,7 @@ document.addEventListener("DOMContentLoaded", function () {
 document.addEventListener("DOMContentLoaded", function () {
 	// Seleciona o item de menu com a classe 'active' (presumivelmente o item "Home")
 	const homeMenuItem = document.querySelector('.menu-item.active');
-	
+
 	// Se o item "Home" existir, simula um clique nele
 	if (homeMenuItem) {
 		homeMenuItem.click();
@@ -226,9 +135,9 @@ document.addEventListener("DOMContentLoaded", function () {
 // Ajusta a altura do cabeçalho e o espaçamento do menu com base na altura da tela
 function ajustarHeaderHeight() {
 	let alturaTela = window.innerHeight; // Obtém a altura da tela
-	
+
 	let root = document.documentElement; // Obtém o elemento raiz (:root no CSS)
-	
+
 	// Define o tamanho do cabeçalho com base na altura da tela
 	if (alturaTela < 750) {
 		root.style.setProperty("--header-height", "100px");
@@ -253,18 +162,12 @@ let currentTheme = 'theme1';
 // Função para alternar entre Tema 1 e Tema 2
 function toggleTheme() {
 	const iframe = document.getElementById('contentFrame');
-	
-	// Links dos Relatórios
-	const linkVitimas = document.getElementById('link-vitimas');
-	const linkAutores = document.getElementById('link-autores');
-	const linkQualificacao = document.getElementById('link-qualificacao');
-	const linkProjetoHQH = document.getElementById('link-projeto-hqh');
-	
+
 	// Imagens Fixas superiores
 	const menuImage = document.getElementById('menu-icon');
 	const pdfImage = document.getElementById('pdf');
 	const xlsImage = document.getElementById('xls');
-	
+
 	// Imagens dos itens de menu
 	const homeImage = document.getElementById('home');
 	const cadastroImage = document.getElementById('cadastro');
@@ -272,75 +175,30 @@ function toggleTheme() {
 	const listImage = document.getElementById('list');
 	const investImage = document.getElementById('invest');
 	const dashImage = document.getElementById('dash');
-	
+
 	if (currentTheme === 'theme1') {
 		// Altera os links
-		linkVitimas.href = "https://sesp.viya.sesp.es.gov.br/SASVisualAnalytics/?reportUri=%2Freports%2Freports%2F49d984bd-bf6b-4832-b6e4-faa238726356&sectionIndex=1&reportViewOnly=true&reportContextBar=false&pageNavigation=false&sas-welcome=false&appSwitcherDisabled=true";
-		linkAutores.href = "https://sesp.viya.sesp.es.gov.br/SASVisualAnalytics/?reportUri=%2Freports%2Freports%2F8a8e5b65-42fb-4614-8f56-0ac0b0d2a711&sectionIndex=1&reportViewOnly=true&reportContextBar=false&pageNavigation=false&sas-welcome=false&appSwitcherDisabled=true";
-		linkQualificacao.href = "https://sesp.viya.sesp.es.gov.br/SASVisualAnalytics/?reportUri=%2Freports%2Freports%2Fcb803580-71ca-45e7-ab9c-f7966fcce499&sectionIndex=4&reportViewOnly=true&reportContextBar=false&pageNavigation=false&sas-welcome=false&appSwitcherDisabled=true";
-		linkProjetoHQH.href = "https://sesp.viya.sesp.es.gov.br/SASVisualAnalytics/?reportUri=%2Freports%2Freports%2F5ce9983f-db1f-4651-8ce7-460dd58ed53d&sectionIndex=4&reportViewOnly=true&reportContextBar=false&pageNavigation=false&sas-welcome=false&appSwitcherDisabled=true";
 		//&appSwitcherDisabled=true
-		
-		// Muda para o Tema 2
-		document.documentElement.style.setProperty('--backgroundv2', 'linear-gradient(90deg, #F36F6E 0%, #F36E9B 100%)');
-		document.documentElement.style.setProperty('--background-color', '#FAFAFA');
-		document.documentElement.style.setProperty('--background-color-hover', '#FEF1F1');
-		document.documentElement.style.setProperty('--background-color-active', 'none');
-		document.documentElement.style.setProperty('--text-color', '#373948');
-		document.documentElement.style.setProperty('--text-color-sub', '#fff');
-		document.documentElement.style.setProperty('--menu-text-color', '#F36F6E');
-		document.documentElement.style.setProperty('--border-color', '#011338');
-		document.documentElement.style.setProperty('--titulo-color', '#fff');
-		document.documentElement.style.setProperty('--text-color-active', '#fff');
-		document.documentElement.style.setProperty('--imgbranca', 'brightness(0) invert(1)');
-		
-		// Altera a imagens
-		menuImage.src = '/files/files/186c262c-043d-49a9-b2ae-d12aa1d2362f/content';
-		pdfImage.src = '/files/files/7df85977-f7af-4aad-a568-b0ef57e4b87a/content';
-		xlsImage.src = '/files/files/48fb4835-f944-4b7f-b86d-818643c1aea2/content';
-		
+
 		currentTheme = 'theme2';
 	} else {
 		// Altera os links
-		linkVitimas.href = "https://sesp.viya.sesp.es.gov.br/SASVisualAnalytics/?reportUri=%2Freports%2Freports%2F49d984bd-bf6b-4832-b6e4-faa238726356&sectionIndex=0&reportViewOnly=true&reportContextBar=false&pageNavigation=false&sas-welcome=false&appSwitcherDisabled=true";
-		linkAutores.href = "https://sesp.viya.sesp.es.gov.br/SASVisualAnalytics/?reportUri=%2Freports%2Freports%2F8a8e5b65-42fb-4614-8f56-0ac0b0d2a711&sectionIndex=0&reportViewOnly=true&reportContextBar=false&pageNavigation=false&sas-welcome=false&appSwitcherDisabled=true";
-		linkQualificacao.href = "https://sesp.viya.sesp.es.gov.br/SASVisualAnalytics/?reportUri=%2Freports%2Freports%2Fcb803580-71ca-45e7-ab9c-f7966fcce499&sectionIndex=3&reportViewOnly=true&reportContextBar=false&pageNavigation=false&sas-welcome=false&appSwitcherDisabled=true";
-		linkProjetoHQH.href = "https://sesp.viya.sesp.es.gov.br/SASVisualAnalytics/?reportUri=%2Freports%2Freports%2F5ce9983f-db1f-4651-8ce7-460dd58ed53d&sectionIndex=3&reportViewOnly=true&reportContextBar=false&pageNavigation=false&sas-welcome=false&appSwitcherDisabled=true";
 		//&appSwitcherDisabled=true
-		
-		// Muda para o Tema 1
-		document.documentElement.style.setProperty('--backgroundv2', 'none');
-		document.documentElement.style.setProperty('--background-color', '#011338');
-		document.documentElement.style.setProperty('--background-color-hover', '#11DC92');
-		document.documentElement.style.setProperty('--background-color-active', '#11DC92');
-		document.documentElement.style.setProperty('--text-color', '#FFF');
-		document.documentElement.style.setProperty('--text-color-sub', '#434F68');
-		document.documentElement.style.setProperty('--menu-text-color', '#fff');
-		document.documentElement.style.setProperty('--border-color', '#11DC92');
-		document.documentElement.style.setProperty('--border-sidebar', '#434F68');
-		document.documentElement.style.setProperty('--titulo-color', '#11DC92');
-		document.documentElement.style.setProperty('--text-color-active', '#fff');
-		document.documentElement.style.setProperty('--imgbranca', 'none');
-		
-		// Restaura a imagem do brasão
-		menuImage.src = '/files/files/411b72c6-1457-4f40-8981-481c53a3850e/content';
-		pdfImage.src = '/files/files/68212e43-510a-4bf4-b8b1-977076dd87cd/content';
-		xlsImage.src = '/files/files/a8558793-ec25-414f-9685-03ced1e07773/content';
-		
+
 		currentTheme = 'theme1';
 	}
-	
+
 	// Envia o tema para o iframe
 	sendThemeToIframe();
 }
 
 // Envia o tema atual para o iframe
 function sendThemeToIframe() {
-	let theme = currentTheme; // Obtém o tema atual 
+	let theme = currentTheme; // Obtém o tema atual
 	let iframe = document.getElementById("contentFrame");
-	
+
 	// console.log("Enviando tema para o iframe:", theme); // Log antes do envio
-	
+
 	// Verifica se o iframe foi encontrado
 	if (iframe) {
 		iframe.contentWindow.postMessage({ theme: theme }, "*");
@@ -357,14 +215,21 @@ iframe.addEventListener('load', function() {
 	sendThemeToIframe(); // Envia o tema atual toda vez que o iframe for carregado
 });
 
-// Removendo o header do Investigator
+// Remove banner do SAS VI ou altera o fundo do SAS VA
 document.getElementById('contentFrame').onload = function () {
 	setTimeout(function () {
-		const iframe = document.getElementById('contentFrame').contentWindow.document;
-		const header = iframe.querySelector('.sas-banner');
-		
+		const iframeDoc = document.getElementById('contentFrame').contentWindow.document;
+
+		// Oculta o header do SAS VI
+		const header = iframeDoc.querySelector('.sas-banner');
 		if (header) {
-			header.style.display = 'none';  // Oculta o header
+			header.style.display = 'none';
+		}
+
+		// Altera o background do SAS VA
+		const mainPage = iframeDoc.getElementById('applicationMainPage');
+		if (mainPage) {
+			mainPage.style.backgroundColor = '#f4f4f9';
 		}
 	}, 5000); // Aguarda 5 segundos antes de executar
 };

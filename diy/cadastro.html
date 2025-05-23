@@ -540,24 +540,6 @@
 			// Comparar com os dois dígitos verificadores
 			return cpf.charAt(9) == firstCheck && cpf.charAt(10) == secondCheck;
 		}
-
-		// Recebe informação do tema do index
-		window.addEventListener("message", function (event) {
-			if (event.data.theme) {
-				// console.log("Tema recebido na Home:", event.data.theme);
-
-				// Aplica o tema corretamente
-				if (event.data.theme === 'theme1') {
-					document.documentElement.style.setProperty('--menu-text-color', '#5154B2');
-					document.documentElement.style.setProperty('--button-color', '#5154B2');
-					document.documentElement.style.setProperty('--button-color-bg', 'none');
-				} else {
-					document.documentElement.style.setProperty('--menu-text-color', '#F36F6E');
-					document.documentElement.style.setProperty('--button-color', 'none');
-					document.documentElement.style.setProperty('--button-color-bg', 'linear-gradient(90deg, #F36F6E 0%, #F36E9B 100%)');
-				}
-			}
-		});
 	</script>
 </body>
 </html>
