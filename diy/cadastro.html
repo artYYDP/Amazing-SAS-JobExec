@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<style>
+		* {
+			margin: 16px;
+			box-sizing: border-box;
+		}
+
+		:root {
+			--header-height: 160px;
+			--color1: #101A3B;
+			--color2: #11DC92;
+			--button-color: #11DC92; /* Cor azul da Vert */
+			--button-color-bg: none;
+			--background-color: #fff;
+			--background-color-hover: #F4F4F9;
+			--background-color-active: #FEE4F3;
+			--text-color: #404041;
+			--menu-text-color: #101A3B; /* Cor azul da Vert */
+			--border-color: #FE91CA;
+			--altura-botao: 48px;
+			--placeholder-color: #6C757D;
+		}
+
+		@font-face {
+			font-family: 'Noto Sans';
+			src:
+				url('/files/files/02747e4d-3008-46c4-b64a-6a293b7d4798/content') format('truetype');
+			font-weight: 400;
+			font-style: normal;
+		}
+
+		@font-face {
+			font-family: 'Noto Sans';
+			src:
+				url('/files/files/001d6e51-cc3b-4ba4-a9ee-25b5a0a1feaf/content') format('truetype');
+			font-weight: 700;
+			font-style: normal;
+		}
+
+		@font-face {
+			font-family: 'Organetto Bold';
+			src:
+				url('/files/files/d9bdaaa7-b7cc-43b5-a847-2fbc00c0878f/content') format('truetype');
+			font-weight: 400;
+			font-style: normal;
+		}
+
+		@font-face {
+			font-family: 'Kinetika-Medium';
+			src:
+				url('/files/files/cf08361b-6fc9-44fd-8f5a-1e8f4ee72765/content') format('truetype');
+			font-weight: 400;
+			font-style: normal;
+		}
+
+		body {
+			font-family: 'Noto Sans';
+		}
+
+		p {
+			margin: 4px 16px 40px 16px;
+		}
+
+		h1,
+		h2 {
+			text-align: left;
+			color: var(--menu-text-color);
+			font-size: 28px;
+			margin: 16px 16px 0 16px;
+		}
+
+		.jobexec_form {
+			height: 99%;
+			margin: 0 auto 20px;
+			padding: 20px;
+			background-color: #fff;
+			border-radius: 8px;
+			border: 1px solid #DEE2E6;
+		}
+
+		input {
+			font-family: 'Noto Sans';
+		}
+
+		input::-webkit-datetime-edit-fields-wrapper {
+			font-family: 'Noto Sans';
+			direction: inherit !important;
+			text-orientation: inherit !important;
+			writing-mode: inherit !important;
+			font-size: 16px;
+			color: var(--placeholder-color);
+		}
+
+		label	{
+			text-align: center;
+			font-weight: bold;
+			font-size: 16px;
+			display: block;
+			margin: 8px 16px;
+			color: var(--text-color);
+			width: auto;
+			height: auto;
+			text-align: left;
+			border: none;
+			border-radius: 0;
+		}
+
+		input.jobexec_sample_input_text {
+			border-radius: 6px;
+			border: 2px solid #DEE2E6;
+			height: var(--altura-botao);
+			font-size: 16px;
+			width: calc(100% - 32px);
+			display: block;
+			margin: 8px 16px 0;
+			padding: 16px;
+			box-sizing: border-box;
+			color: var(--text-color);
+			text-transform: uppercase;
+		}
+
+		select {
+			font-family: 'Noto Sans';
+		}
+
+		select.jobexec_sample_input_text {
+			border-radius: 6px;
+			border: 2px solid #DEE2E6;
+			height: var(--altura-botao);
+			font-size: 16px;
+			width: calc(100% - 32px);
+			display: block;
+			margin: 8px 16px 0;
+			padding: 0 16px 0 16px;
+			box-sizing: border-box;
+			color: var(--placeholder-color);
+			background-color: white;
+			text-transform: uppercase;
+		}
+
+		.input-group {
+			display: flex;
+			margin: 0;
+			width: 100%;
+			padding: 0;
+			justify-content: space-between;
+		}
+
+		.input-field {
+			display: flex;
+			flex-direction: column;
+			width: 95%;
+			max-width: 60%;
+			margin: 0;
+			padding: 0;
+		}
+
+		.input-field label {
+			font-weight: bold;
+			margin: 24px 16px 0;
+			padding: 0;
+		}
+
+		.jobexec_sample_input_submit {
+			background: var(--color2);
+			color: var(--color1);
+			border: none;
+			padding: 20px 24px;
+			font-size: 16px;
+			font-weight: bold;
+			border-radius: 6px;
+			cursor: pointer;
+			transition: background-color 0.3s;
+			display: inline-block;
+			width: 137px;
+			height: var(--altura-botao);
+			margin: 24px 0 0 0;
+			padding: 0;
+		}
+
+		.jobexec_sample_input_submit:hover {
+			color: var(--color2);
+			background: var(--color1);
+		}
+
+		.button-container {
+			display: flex;
+			align-items: center;
+			gap: 16px;
+		}
+
+		.jobexec_sample_input_cancel {
+			background-color: #fff;
+			color: var(--menu-text-color);
+			border: none;
+			padding: 20px 24px;
+			font-size: 16px;
+			font-weight: bold;
+			border-radius: 6px;
+			cursor: pointer;
+			transition: background-color 0.3s;
+			display: inline-block;
+			width: 137px;
+			height: var(--altura-botao);
+			margin: 24px 0 0 0;
+			padding: 0;
+			border: 1px solid var(--menu-text-color);
+		}
+
+		.jobexec_sample_input_cancel:hover {
+			background-color: none;
+			background: var(--color1);
+			color: var(--color2);
+		}
+
+		.json-container {
+			margin: 30px auto;
+			padding: 10px;
+			border: 1px solid #ddd;
+			border-radius: 6px;
+			background-color: #D1E7DD;
+			overflow: auto;
+			display: none;
+			transition: opacity 0.5s ease-in-out;
+		}
+
+		.required {
+			color: red;
+			font-weight: bold;
+		}
+
+		/* Mensagem de sucesso */
+		.json-success-message {
+			color: #0F5132;
+			font-weight: bold;
+			font-size: 14px;
+			margin: 10px;
+		}
+
+		.json-success-text {
+			color: #0F5132;
+			font-weight: normal;
+			font-size: 14px;
+			margin: 10px;
+		}
+
+		/* Mensagem de erro */
+		.json-error-message {
+			color: #842029;
+			font-weight: bold;
+			font-size: 14px;
+			margin: 10px;
+		}
+
+		.json-error-text {
+			color: #842029;
+			font-weight: normal;
+			font-size: 14px;
+			margin: 10px;
+		}
+
+		.json-error-background {
+			background-color: #F8D7DA;
+		}
+
+		#spinner {
+			display: none;
+			margin: 20px 0;
+		}
+
+		#spinner img {
+			width: 100px;
+		}
+
+		#cpf-error {
+			color: red;
+			font-size: 12px;
+			display: none;
+		}
+	</style>
+</head>
+<body role="main">
+		<!-- Formulário de Cadastro -->
+		<form id="form1" class="jobexec_form" enctype="multipart/form-data">
+			<input type="hidden" name="_program" value="$PROGRAM$">
+			<input type="hidden" name="_action" value="execute"/>
+			<input type="hidden" name="_output_type" value="json"/>
+			<input type="hidden" name="_csrf" value="$CSRF$">
+
+			<input type="hidden" id="currentDate" name="currentDate">
+			<input type="hidden" id="currentTime" name="currentTime">
+
+			<h2>Cadastro</h2>
+			<p class="summary-text">Preencha os campos abaixo para cadastrar.</p>
+			<label for="nome">Nome completo:<span class="required">*</span></label>
+			<input type="text" id="nome" name="nome" class="jobexec_sample_input_text" placeholder="Digite aqui" required />
+			<div class="input-group">
+				<div class="input-field">
+					<label for="cpf">CPF:<span class="required">*</span></label>
+					<input type="text" id="cpf" name="cpf" class="jobexec_sample_input_text" placeholder="000.000.000-00" maxlength="11" required />
+					<span id="cpf-error" style="color: red; display: none;">CPF inválido! Por favor, tente novamente.</span>
+				</div>
+
+				<div class="input-field">
+					<label for="dt_nasc">Data de nascimento:<span class="required">*</span></label>
+					<input type="date" id="dt_nasc" name="dt_nasc" class="jobexec_sample_input_text" placeholder="DD/MM/AAAA" required />
+				</div>
+			</div>
+
+			<!-- Botão de Envio -->
+			<div class="button-container">
+				<input type="button" value="Cadastrar" class="jobexec_sample_input_submit" onclick="submitForm1()"/>
+				<input type="button" value="Limpar" class="jobexec_sample_input_cancel" onclick="cancelAction()"/>
+			</div>
+
+			<div id="spinner" style="display:none; text-align: left;">
+				<img src="/files/files/c8d9eaee-6b6f-428a-8b41-2dbca0592ae9/content" alt="Enviando..." />
+			</div>
+
+			<div id="jsonResult" class="json-container">
+				<!-- O resultado JSON será exibido aqui -->
+			</div>
+	</form>
+	<script>
+		// Valida se a data de nascimento for menor que 18 anos
+		document.getElementById("dt_nasc").addEventListener("blur", function() {
+			let inputData = this.value; // Pega a data inserida
+			let dataNascimento = new Date(inputData);
+
+			let hoje = new Date();
+			let idade = hoje.getFullYear() - dataNascimento.getFullYear();
+			let mesAtual = hoje.getMonth();
+			let mesNascimento = dataNascimento.getMonth();
+			let diaAtual = hoje.getDate();
+			let diaNascimento = dataNascimento.getDate();
+
+			// Ajusta a idade caso ainda não tenha feito aniversário este ano
+			if (mesAtual < mesNascimento || (mesAtual === mesNascimento && diaAtual < diaNascimento)) {
+				idade--;
+			}
+
+			// Se a idade for menor que 18, exibir alerta
+			if (idade < 18) {
+				let confirmar = confirm("A idade informada tem menos de 18 anos. Deseja continuar?");
+
+				if (!confirmar) {
+					this.value = ""; // Limpa o campo se o usuário cancelar
+				}
+			} else if (idade > 100) {
+				let confirmar = confirm("A idade informada é superior a 100 anos. Deseja continuar?");
+
+				if (!confirmar) {
+					this.value = ""; // Limpa o campo se o usuário cancelar
+				}
+			}
+		});
+
+		// Função para envio do formulário usando fetch
+		function submitForm1() {
+			var form1 = document.getElementById('form1');
+			var formData = new FormData(form1);
+
+			// Validação de campos
+			var nomeInput = document.getElementById('nome');
+			var cpfInput = document.getElementById('cpf');
+			var dt_nascInput = document.getElementById('dt_nasc');
+
+			if (!nomeInput.value.trim()) {
+				alert('Por favor, preencha o nome do participante.');
+				nomeInput.focus();
+				return false;
+			}
+
+			if (!cpfInput.value.trim()) {
+				alert('Por favor, preencha o CPF.');
+				cpfInput.focus();
+				return false;
+			}
+
+			if (!dt_nascInput.value.trim()) {
+				alert('Por favor, preencha a data de nascimento.');
+				dt_nascInput.focus();
+				return false;
+			}
+
+			// Exibe o spinner
+			document.getElementById('spinner').style.display = 'block';
+
+			// Enviar o formulário com fetch
+			fetch('/SASJobExecution/', {
+				method: 'POST',
+				body: formData
+			})
+			.then(response => {
+				// console.log('Resposta recebida:', response);
+				return response.json();
+			})
+			.then(data => {
+				// console.log('Dados recebidos:', data);
+
+			// Oculta o spinner após a resposta
+			document.getElementById('spinner').style.display = 'none';
+
+			// Exibe o JSON formatado no div 'jsonResult' se o código for 200
+			if (data[0].code === 200) {
+				document.getElementById('jsonResult').innerHTML = `
+					<p class="json-success-message">${data[0].message}</p>
+					<p class="json-success-text">${data[0].text}</p>
+				`;
+
+				setTimeout(() => {
+					document.getElementById('jsonResult').style.display = 'none';
+				}, 5000); // 5000 milissegundos = 5 segundos
+
+				// Restaura o fundo padrão para sucesso
+				document.getElementById('jsonResult').classList.remove('json-error-background');
+
+			} else if (data[0].code === 400) {
+				// Exibe uma mensagem diferente se o código for 400
+				document.getElementById('jsonResult').innerHTML = `
+					<p class="json-error-message">${data[0].message}</p>
+					<p class="json-error-text">${data[0].text}</p>
+				`;
+
+				setTimeout(() => {
+					document.getElementById('jsonResult').style.display = 'none';
+				}, 5000); // 5000 milissegundos = 5 segundos
+
+			} else if (data[0].code === 300) {
+				// Exibe a mensagem para o código 300
+				document.getElementById('jsonResult').innerHTML = `
+					<p class="json-error-message">${data[0].message}</p>
+					<p class="json-error-text">${data[0].text}</p>
+				`;
+
+				setTimeout(() => {
+					document.getElementById('jsonResult').style.display = 'none';
+				}, 5000); // 5000 milissegundos = 5 segundos
+
+				// Altera o fundo para a cor de erro
+				document.getElementById('jsonResult').classList.add('json-error-background');
+
+			} else {
+				document.getElementById('jsonResult').textContent = 'Ocorreu um erro ao enviar as respostas. Peça ajuda ao Administrador do sistema';
+				document.getElementById('jsonResult').classList.add('json-error-background');
+			}
+
+			document.getElementById('jsonResult').style.display = 'block';
+
+			})
+
+			.catch(error => {
+				// Oculta o spinner se ocorrer um erro
+				document.getElementById('spinner').style.display = 'none';
+
+				// console.error('Erro:', error);
+				document.getElementById('jsonResult').textContent = 'Ocorreu um erro ao enviar as respostas.';
+				document.getElementById('jsonResult').classList.add('json-error-background');
+				document.getElementById('jsonResult').style.display = 'block';
+			});
+		}
+
+		function cancelAction() {
+			document.getElementById("form1").reset(); // Reseta o formulário
+		}
+
+		document.getElementById("cpf").addEventListener("blur", function () {
+			let cpf = this.value.replace(/\D/g, '');
+			if (cpf.length === 11) {
+				// Aplica a máscara quando o CPF tem 11 caracteres
+				this.value = cpf.replace(/(\d{3})(\d{3})(\d{3})(\d{2})/, '$1.$2.$3-$4');
+			} else {
+				this.value = '';
+			}
+		});
+
+		document.getElementById('cpf').addEventListener('input', function(event) {
+			let cpf = event.target.value;
+
+			// Remover caracteres não numéricos enquanto o usuário digita
+			cpf = cpf.replace(/\D/g, '');
+
+			// Formatar CPF: 000.000.000-00
+			if (cpf.length <= 11) {
+				cpf = cpf.replace(/(\d{3})(\d{3})(\d{3})(\d{2})/, '$1.$2.$3-$4');
+				event.target.value = cpf;
+			}
+		});
+
+		document.getElementById('cpf').addEventListener('blur', function(event) {
+			let cpf = event.target.value.replace(/\D/g, ''); // Remover qualquer caractere não numérico
+
+			// Validar CPF apenas quando o usuário sair do campo
+			if (!isValidCPF(cpf)) {
+				document.getElementById('cpf-error').style.display = 'inline'; // Mostrar erro
+				event.target.value = ''; // Limpar campo
+			} else {
+					document.getElementById('cpf-error').style.display = 'none'; // Ocultar erro
+			}
+		});
+
+		// Função corrigida para validar o CPF
+		function isValidCPF(cpf) {
+			// console.log(`Validando CPF: ${cpf}`);	// Adicionando log para depuração
+
+			// Garantir que CPF tenha 11 caracteres (caso contrário, não é válido)
+			if (cpf.length !== 11) {
+				return false;
+			}
+
+			// Eliminar CPFs conhecidos como inválidos (todos os números repetidos)
+			if (/^(\d)\1{10}$/.test(cpf)) {
+				return false;
+			}
+
+			// Validar primeiro dígito verificador
+			let sum = 0;
+			let weight = 10;
+			for (let i = 0; i < 9; i++) {
+				sum += parseInt(cpf.charAt(i)) * weight;
+				weight--;
+			}
+			let firstCheck = sum % 11;
+			firstCheck = (firstCheck < 2) ? 0 : 11 - firstCheck;
+
+			// Validar segundo dígito verificador
+			sum = 0;
+			weight = 11;
+			for (let i = 0; i < 10; i++) {
+				sum += parseInt(cpf.charAt(i)) * weight;
+				weight--;
+			}
+			let secondCheck = sum % 11;
+			secondCheck = (secondCheck < 2) ? 0 : 11 - secondCheck;
+
+			// Comparar com os dois dígitos verificadores
+			return cpf.charAt(9) == firstCheck && cpf.charAt(10) == secondCheck;
+		}
+
+		// Recebe informação do tema do index
+		window.addEventListener("message", function (event) {
+			if (event.data.theme) {
+				// console.log("Tema recebido na Home:", event.data.theme);
+
+				// Aplica o tema corretamente
+				if (event.data.theme === 'theme1') {
+					document.documentElement.style.setProperty('--menu-text-color', '#5154B2');
+					document.documentElement.style.setProperty('--button-color', '#5154B2');
+					document.documentElement.style.setProperty('--button-color-bg', 'none');
+				} else {
+					document.documentElement.style.setProperty('--menu-text-color', '#F36F6E');
+					document.documentElement.style.setProperty('--button-color', 'none');
+					document.documentElement.style.setProperty('--button-color-bg', 'linear-gradient(90deg, #F36F6E 0%, #F36E9B 100%)');
+				}
+			}
+		});
+	</script>
+</body>
+</html>

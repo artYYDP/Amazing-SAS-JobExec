@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+	<head>
+    <meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<style>
+			* {
+				margin: 16px;
+				padding: 0;
+				box-sizing: border-box;
+			}
+
+			:root {
+				--color1: #101A3B; /* Cor azul da Vert */
+				--color2: #11DC92; /* Cor verde da Vert */
+				--color3: #fff; /* Cor de contraste da Vert */
+				--bg: #F8F9FA;
+				--border: #DEE2E6;
+				--header-height: 160px;
+				--text-color: #fff;
+			}
+
+			@font-face {
+				font-family: 'Noto Sans';
+				src:
+					url('/files/files/02747e4d-3008-46c4-b64a-6a293b7d4798/content') format('truetype');
+				font-weight: 400;
+				font-style: normal;
+			}
+
+			@font-face {
+				font-family: 'Noto Sans';
+				src:
+					url('/files/files/001d6e51-cc3b-4ba4-a9ee-25b5a0a1feaf/content') format('truetype');
+				font-weight: 700;
+				font-style: normal;
+			}
+
+			@font-face {
+				font-family: 'Organetto Bold';
+				src:
+					url('/files/files/d9bdaaa7-b7cc-43b5-a847-2fbc00c0878f/content') format('truetype');
+				font-weight: 400;
+				font-style: normal;
+			}
+
+			@font-face {
+				font-family: 'Kinetika-Medium';
+				src:
+					url('/files/files/cf08361b-6fc9-44fd-8f5a-1e8f4ee72765/content') format('truetype');
+				font-weight: 400;
+				font-style: normal;
+			}
+
+			body {
+				font-family: 'Noto Sans';
+			}
+
+			p {
+				margin: 4px 16px 40px 16px;
+			}
+
+			h1,
+			h2 {
+				text-align: left;
+				color: var(--color1);
+				font-size: 28px;
+				margin: 16px 16px 0 16px;
+			}
+
+			.description {
+				font-size: 18px;
+				color: var(--color1);
+				line-height: 1.5;
+				margin-top: 4px;
+				margin-bottom: 0;
+			}
+
+			.description a {
+				font-size: 18px;
+				margin-top: 4px;
+				margin-left: 0;
+				margin-right: 0;
+				margin-bottom: 0;
+			}
+
+			.container {
+				width: 100%;
+				max-width: auto;
+				height: 100%;
+				margin: 0 auto 20px;
+				padding: 20px;
+				background-color: var(--color3);
+				border-radius: 8px;
+				border: 1px solid var(--border);
+			}
+
+			.cards {
+				display: flex;
+				justify-content: space-between;
+				margin-top: 20px;
+				gap: 20px;
+			}
+
+			.card {
+				display: flex;
+				flex-direction: column;
+				justify-content: space-between;
+				align-items: center;
+				background: var(--bg);
+				padding: 16px;
+				padding-bottom: 60px;
+				border-radius: 8px;
+				width: 30%;
+				border: 1px solid var(--border);
+			}
+
+			.card img {
+				width: 200px;
+				height: auto;
+				margin-bottom: 10px;
+			}
+
+			.card h3 {
+				text-align: left;
+				color: var(--color1);
+				font-size: 24px;
+			}
+
+			.card p {
+				margin-bottom: 0;
+				color: var(--color1);
+				text-align: left;
+				font-size: 16px;
+			}
+		</style>
+	</head>
+	<body role="main">
+		<div class="container">
+			<h1>Início</h1>
+			<p class="description">Exemplo de sistema com interface interativa, conectado a múltiplos Jobs no SAS Viya via Job Execution.</p>
+
+			<div class="cards">
+				<div class="card">
+					<h3>Formulários Integrados ao SAS</h3>
+					<img id="img1" src="/files/files/24bae424-2d1a-4f93-9358-58f6195e598c/content" alt="Ícone Formulário">
+					<p>Crie formulários HTML que se comunicam com códigos SAS, enviando parâmetros inserindo inputs necessários.</p>
+				</div>
+
+				<div class="card">
+					<h3>Integração com Outras Ferramentas</h3>
+					<img id="img2" src="/files/files/83fb6873-22f5-43b9-878b-28e84755cf06/content" alt="Ícone Integração">
+					<p>Conecte o SAS Job Execution a outras soluções SAS, como SAS Visual Analytics ou SAS Visual Investigator, tudo acessível pelo menu.</p>
+				</div>
+
+				<div class="card">
+					<h3>Interfaces para APIs SAS</h3>
+					<img id="img3" src="/files/files/502e40c1-0cdf-4caf-bbbe-e6653c72f290/content" alt="Ícone API">
+					<p>Crie páginas HTML que consomem Jobs SAS como APIs, exibindo dados de diversas fontes.</p>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
