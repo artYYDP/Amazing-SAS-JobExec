@@ -33,7 +33,7 @@ Exemplo:
 
 ## 🖼️ Conteúdo dinâmico via iframe
 
-O próprio SAS recomenda o uso de iframes para carregar conteúdo interno como relatórios do Visual Analytics, dashboards ou até outros jobs HTML.
+Recomenda-se o uso de iframes para carregar conteúdo interno como relatórios do Visual Analytics, dashboards ou até outros jobs HTML.
 
 Exemplo básico:
 
@@ -48,7 +48,7 @@ Exemplo básico:
 </iframe>
 ```
 
-- O parâmetro **`&appSwitcherDisabled=true`** é obrigatório. Ele evita que o VA redirecione o usuário para a tela de escolha de aplicações. Sem esse parâmetro, o link do `report` não funcionará.
+- O parâmetro **`&appSwitcherDisabled=true`** é obrigatório. Ele evita que o VA redirecione o usuário para a tela de escolha de aplicações. Sem esse parâmetro, o link do `report` não funcionará[^1].
 - É possível usar múltiplos iframes em uma única página, cada um com um gráfico, relatório ou outro conteúdo VA.
 
 ## 🧠 Boas práticas
@@ -57,3 +57,5 @@ Exemplo básico:
 - Nomeie seus elementos com lógica e clareza (ex: id="grafico-gastos", class="botao-verde")
 - Prefira vanilla JS ao invés de frameworks, já que não é possível importar bibliotecas externas via CDN
 - Crie uma pasta ou estrutura de Jobs somente para arquivos HTML, CSS e JS para facilitar manutenção futura
+
+[^1]: [Using URL Parameters to View a Report](https://documentation.sas.com/doc/en/vacdc/v_031/vavwr/p0l4zt68r3id4wn1fk3y3kconfg4.htm)

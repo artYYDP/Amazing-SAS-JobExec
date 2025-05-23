@@ -56,6 +56,7 @@ Crie **interfaces customizadas, interativas e inteligentes** utilizando **HTML, 
 - [**Arthur Diego Pereira**](https://www.linkedin.com/in/arthurdiegopereira/) – Idealizador dos processos em Job Execution e criador deste repositório.
 - [**Matheus Cougo**](https://www.linkedin.com/in/mdcougo/) – Analista de UI/UX que sempre me incentivou a ir além da minha capacidade.
 - [**Geiziane Oliveira**](https://www.linkedin.com/in/geiziane-oliveira-0a5882110/) – Mentora que me ajudou a destravar o código SAS e me apaixonar pela linguagem.
+- [**Diogo Silva**](https://www.linkedin.com/in/silva-diogo/) – Contribuiu com insights valiosos sobre como integrar o SAS Job Execution por meio de iframes.
 - [**Rafhael Martins**](https://www.linkedin.com/in/rafhael-de-oliveira-martins-3bab63138/) – Pela ajuda na criação de pop-up com Job Execution dentro do SAS Visual Analytics.
 
 Agradecimentos especiais também à [**Vert Analytics**](https://www.vertanalytics.com.br), empresa na qual trabalho e sou muito grato por fazer parte desse time de especialistas, e a todos os participantes da palestra **SAS Sem Limites: Construindo Soluções Analíticas Fora da Caixa com SAS Job Execution** que disponibilizaram um pouco do seu tempo para aprender um pouco mais sobre SAS!
