@@ -7,10 +7,8 @@
 
 ## 🌍 Available Languages
 
-- 🇺🇸 [English (default)](./README.md)
-- 🇧🇷 [Português](./pt-BR/README.md)
-
----
+- 🇺🇸 English (`en-US`)
+- 🇧🇷 [Português (`pt-BR`)](./pt-BR/README.md)
 
 ## Contents
 
