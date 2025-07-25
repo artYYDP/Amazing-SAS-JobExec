@@ -1,1 +1,0 @@
-Processo em andamento de teste de envio de e-mail pelo JE.
