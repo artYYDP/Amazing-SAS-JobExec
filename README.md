@@ -1,67 +1,67 @@
-![Banner](/images/Amazing_SAS_Job_Execution.png)
+![Banner](/images/Amazing%20Job%20Execution.svg)
 <div align="center">
 
 [![License](https://img.shields.io/github/license/artYYDP/Amazing-SAS-JobExec?style=flat-square)](LICENSE)
 
 </div>
 
-## Índice
+## Contents
 
-- [Objetivo](#objetivo)
-- [Regras de Uso](#regras-de-uso)
-- [Habilidades e Ferramentas Necessárias](#habilidades-e-ferramentas-necessárias)
-- [Como o SAS Job Execution pode ser utilizado?](#como-o-sas-job-execution-pode-ser-utilizado)
-  - [Utilizando o Job Execution como API](#utilizando-o-job-execution-como-api)
-  - [Utilizando o Job Execution como Interface](#utilizando-o-job-execution-como-interface)
-  - [Utilizando o Job Execution como Fluxo de Trabalho](#utilizando-o-job-execution-como-fluxo-de-trabalho)
+- [Objective](#objective)
+- [Usage Rules](#usage-rules)
+- [Required Skills and Tools](#required-skills-and-tools)
+- [How Can SAS Job Execution Be Used?](#how-can-sas-job-execution-be-used)
+  - [Using Job Execution as an API](#using-job-execution-as-an-api)
+  - [Using Job Execution as an Interface](#using-job-execution-as-an-interface)
+  - [Using Job Execution as a Workflow](#using-job-execution-as-a-workflow)
 
-- [Autor, Contribuição e Agradecimentos](#autor-contribuição-e-agradecimentos)
-- [Referências](#referências)
+- [Author, Contributions, and Acknowledgments](#author-contributions-and-acknowledgments)
+- [References](#references)
 
-## Objetivo
+## Objective
 
-Este repositório reúne os materiais essenciais para ajudá-lo a construir aplicações robustas e eficientes com o **SAS Job Execution**.
+This repository gathers the essential materials to help you build robust and efficient applications using **SAS Job Execution**.
 
-O principal objetivo é demonstrar como explorar todo o potencial da ferramenta na criação de **APIs, interfaces interativas e fluxos de trabalho analíticos** — ampliando as possibilidades de uso da plataforma para além das práticas tradicionais.
+The main goal is to demonstrate how to fully leverage the power of this tool to create **APIs, interactive interfaces, and analytical workflows** — expanding its use beyond traditional practices.
 
-## Regras de Uso
+## Usage Rules
 
-[Clique aqui](/rules.md) e veja as regras necessárias para construir uma aplicação no SAS Job Execution.
+[View the SAS Job Execution rules and prerequisites](/rules.md) for building applications with SAS Job Execution.
 
-## Habilidades e Ferramentas Necessárias
+## Required Skills and Tools
 
-Para acompanhar este repositório, é recomendável ter familiaridade com:
+To follow along with this repository, it is recommended that you have familiarity with:
 
-✅ **SAS Viya** e **SAS Job Execution**</br>
-✅ **Lógica de programação SAS** para automação de processos</br>
-✅ **APIs REST** para consumo e integração de dados</br>
-✅ **HTML, CSS e JavaScript (Vanilla)** para criação de interfaces interativas
+✅ **SAS Viya** and **SAS Job Execution**
+✅ **SAS programming logic** for process automation
+✅ **REST APIs** for data consumption and integration
+✅ **HTML, CSS, and Vanilla JavaScript** for building interactive interfaces
 
-## Como o SAS Job Execution pode ser utilizado?
+## How Can SAS Job Execution Be Used?
 
-### [Utilizando o Job Execution como Fluxo de Trabalho](/topicos/jobexec-como-fluxo.md)
+### [Using Job Execution as a Workflow](/topicos/jobexec-como-fluxo.md)
 
-Automatize **processos analíticos complexos**, conectando múltiplas tarefas e garantindo a execução sequencial ou paralela de scripts SAS. Essa abordagem facilita a orquestração de fluxos de dados e melhora a eficiência operacional.
+Automate **complex analytical processes** by connecting multiple tasks and ensuring sequential or parallel execution of SAS scripts. This approach facilitates data flow orchestration and enhances operational efficiency.
 
-### [Utilizando o Job Execution como API](/topicos/jobexec-como-api.md)
+### [Using Job Execution as an API](/topicos/jobexec-como-api.md)
 
-Transforme seus processos em **serviços integráveis**, permitindo que outras aplicações consumam e interajam com seus fluxos de trabalho no SAS. Isso possibilita a automação de análises, geração de relatórios dinâmicos e integração com diferentes sistemas.
+Turn your processes into **integrable services**, allowing other applications to consume and interact with your SAS workflows. This enables automated analyses, dynamic report generation, and integration with other systems.
 
-### [Utilizando o Job Execution como Interface](/topicos/jobexec-como-interface.md)
+### [Using Job Execution as an Interface](/topicos/jobexec-como-interface.md)
 
-Crie **interfaces customizadas, interativas e inteligentes** utilizando **HTML, CSS e JavaScript** dentro do JES. Isso permite a construção de dashboards, formulários interativos e aplicações personalizadas para manipulação de dados diretamente na plataforma SAS.
+Build **custom, interactive, and intelligent interfaces** using **HTML, CSS, and JavaScript** within JES. This allows the creation of dashboards, interactive forms, and tailored applications for data manipulation directly within the SAS platform.
 
-## Autor, Contribuição e Agradecimentos
+## Author, Contributions, and Acknowledgments
 
-- [**Arthur Diego Pereira**](https://www.linkedin.com/in/arthurdiegopereira/) – Idealizador dos processos em Job Execution e criador deste repositório.
-- [**Matheus Cougo**](https://www.linkedin.com/in/mdcougo/) – Analista de UI/UX que sempre me incentivou a ir além da minha capacidade.
-- [**Geiziane Oliveira**](https://www.linkedin.com/in/geiziane-oliveira-0a5882110/) – Mentora que me ajudou a destravar o código SAS e me apaixonar pela linguagem.
-- [**Diogo Silva**](https://www.linkedin.com/in/silva-diogo/) – Contribuiu com insights valiosos sobre como integrar o SAS Job Execution por meio de iframes.
-- [**Rafhael Martins**](https://www.linkedin.com/in/rafhael-de-oliveira-martins-3bab63138/) – Pela ajuda na criação de pop-up com Job Execution dentro do SAS Visual Analytics.
+- [**Arthur Diego Pereira**](https://www.linkedin.com/in/arthurdiegopereira/) – Creator of the Job Execution processes and this repository.
+- [**Matheus Cougo**](https://www.linkedin.com/in/mdcougo/) – UI/UX analyst who always encouraged me to go beyond my limits.
+- [**Geiziane Oliveira**](https://www.linkedin.com/in/geiziane-oliveira-0a5882110/) – Mentor who helped me unlock SAS coding and fall in love with the language.
+- [**Diogo Silva**](https://www.linkedin.com/in/silva-diogo/) – Contributed valuable insights on how to integrate SAS Job Execution via iframes.
+- [**Rafhael Martins**](https://www.linkedin.com/in/rafhael-de-oliveira-martins-3bab63138/) – Assisted with creating pop-up modals using Job Execution within SAS Visual Analytics.
 
-Agradecimentos especiais também à [**Vert Analytics**](https://www.vertanalytics.com.br), empresa na qual trabalho e sou muito grato por fazer parte desse time de especialistas, e a todos os participantes da palestra **SAS Sem Limites: Construindo Soluções Analíticas Fora da Caixa com SAS Job Execution** que disponibilizaram um pouco do seu tempo para aprender um pouco mais sobre SAS!
+Special thanks also to [**Vert Analytics**](https://www.vertanalytics.com.br), the company where I work and feel proud to be part of a team of specialists, and to all participants of the presentation **SAS Without Limits: Building Out-of-the-Box Analytical Solutions with SAS Job Execution**, who generously shared their time to learn more about SAS!
 
-## Referências
+## References
 
 - [Comparing the SAS Job Execution Web Application, SAS Studio and jobExecution REST API endpoint](https://communities.sas.com/t5/SAS-Communities-Library/Comparing-the-SAS-Job-Execution-Web-Application-SAS-Studio-and/ta-p/966761)
 - [Running Your SAS Code from the Web Using the SAS Job Execution Web Application](https://communities.sas.com/t5/SAS-Communities-Library/Running-Your-SAS-Code-from-the-Web-Using-the-SAS-Job-Execution/ta-p/666202)
