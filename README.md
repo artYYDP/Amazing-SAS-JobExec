@@ -32,9 +32,9 @@ The main goal is to demonstrate how to fully leverage the power of this tool to 
 
 To follow along with this repository, it is recommended that you have familiarity with:
 
-✅ **SAS Viya** and **SAS Job Execution**
-✅ **SAS programming logic** for process automation
-✅ **REST APIs** for data consumption and integration
+✅ **SAS Viya** and **SAS Job Execution**<br>
+✅ **SAS programming logic** for process automation<br>
+✅ **REST APIs** for data consumption and integration<br>
 ✅ **HTML, CSS, and Vanilla JavaScript** for building interactive interfaces
 
 ## How Can SAS Job Execution Be Used?
