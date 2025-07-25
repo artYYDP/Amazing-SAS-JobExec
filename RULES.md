@@ -35,7 +35,7 @@ This repository gathers best practices and technical requirements for developing
 ```
 
 > [!TIP]
-> If you're not sure how to obtain the URI of a file, [click here (coming soon)](about:blank) to access the full tutorial!
+> If you're not sure how to obtain the URI of a file, see the [tutorial on obtaining the URI of a file](/tutoriais/coletar_URI_do_arquivo.md) for the full instructions!
 
 ### 5. Validation and Logging Logic
 

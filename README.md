@@ -5,10 +5,10 @@
 
 </div>
 
-## 🌍 Available Languages
+## Available Languages
 
 - 🇺🇸 English (`en-US`)
-- 🇧🇷 [Português (`pt-BR`)](./pt-BR/README.md)
+- 🇧🇷 [Português (`pt-BR`)](/languages/pt-BR/README.md)
 
 ## Contents
 
@@ -44,15 +44,15 @@ To follow along with this repository, it is recommended that you have familiarit
 
 ## How Can SAS Job Execution Be Used?
 
-### [Using Job Execution as a Workflow](/topicos/jobexec-como-fluxo.md)
+### [Using Job Execution as a Workflow](/topics/jobexec-como-fluxo.md)
 
 Automate **complex analytical processes** by connecting multiple tasks and ensuring sequential or parallel execution of SAS scripts. This approach facilitates data flow orchestration and enhances operational efficiency.
 
-### [Using Job Execution as an API](/topicos/jobexec-como-api.md)
+### [Using Job Execution as an API](/topics/jobexec-como-api.md)
 
 Turn your processes into **integrable services**, allowing other applications to consume and interact with your SAS workflows. This enables automated analyses, dynamic report generation, and integration with other systems.
 
-### [Using Job Execution as an Interface](/topicos/jobexec-como-interface.md)
+### [Using Job Execution as an Interface](/topics/jobexec-como-interface.md)
 
 Build **custom, interactive, and intelligent interfaces** using **HTML, CSS, and JavaScript** within JES. This allows the creation of dashboards, interactive forms, and tailored applications for data manipulation directly within the SAS platform.
 
@@ -68,9 +68,9 @@ Special thanks also to [**Vert Analytics**](https://www.vertanalytics.com.br), t
 
 ## References
 
-- [Comparing the SAS Job Execution Web Application, SAS Studio and jobExecution REST API endpoint](https://communities.sas.com/t5/SAS-Communities-Library/Comparing-the-SAS-Job-Execution-Web-Application-SAS-Studio-and/ta-p/966761)
-- [Running Your SAS Code from the Web Using the SAS Job Execution Web Application](https://communities.sas.com/t5/SAS-Communities-Library/Running-Your-SAS-Code-from-the-Web-Using-the-SAS-Job-Execution/ta-p/666202)
-- [Working with the SAS Job Execution Web Application](https://documentation.sas.com/doc/en/jobexeccdc/v_004/jobexecug/p1gukmrin5zv1mn1rvb6afi57b88.htm)
+- SAS Communities | [Comparing the SAS Job Execution Web Application, SAS Studio and jobExecution REST API endpoint](https://communities.sas.com/t5/SAS-Communities-Library/Comparing-the-SAS-Job-Execution-Web-Application-SAS-Studio-and/ta-p/966761)
+- SAS Communities | [Running Your SAS Code from the Web Using the SAS Job Execution Web Application](https://communities.sas.com/t5/SAS-Communities-Library/Running-Your-SAS-Code-from-the-Web-Using-the-SAS-Job-Execution/ta-p/666202)
+- SAS Help | [Working with the SAS Job Execution Web Application](https://documentation.sas.com/doc/en/jobexeccdc/v_004/jobexecug/p1gukmrin5zv1mn1rvb6afi57b88.htm)
 
 <!--
 > [!NOTE]
