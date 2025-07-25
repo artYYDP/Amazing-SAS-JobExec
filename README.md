@@ -1,4 +1,4 @@
-![Banner](/images/Amazing%20Job%20Execution.svg)
+![Banner](/images/Amazing%20Job%20Execution.png)
 <div align="center">
 
 [![License](https://img.shields.io/github/license/artYYDP/Amazing-SAS-JobExec?style=flat-square)](LICENSE)
