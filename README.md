@@ -5,6 +5,13 @@
 
 </div>
 
+## 🌍 Available Languages
+
+- 🇺🇸 [English (default)](./README.md)
+- 🇧🇷 [Português](./pt-BR/README.md)
+
+---
+
 ## Contents
 
 - [Objective](#objective)
