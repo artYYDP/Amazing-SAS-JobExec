@@ -26,7 +26,7 @@ The main goal is to demonstrate how to fully leverage the power of this tool to 
 
 ## Usage Rules
 
-[View the SAS Job Execution rules and prerequisites](/rules.md) for building applications with SAS Job Execution.
+[View the SAS Job Execution rules and prerequisites](/RULES.md) for building applications with SAS Job Execution.
 
 ## Required Skills and Tools
 
