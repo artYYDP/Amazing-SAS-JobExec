@@ -19,7 +19,7 @@
   - [Utilizando o Job Execution como API](#utilizando-o-job-execution-como-api)
   - [Utilizando o Job Execution como Interface](#utilizando-o-job-execution-como-interface)
   - [Utilizando o Job Execution como Fluxo de Trabalho](#utilizando-o-job-execution-como-fluxo-de-trabalho)
-
+- [Tópicos Avançados e Casos Práticos](#tópicos-avançados-e-casos-práticos)
 - [Autor, Contribuição e Agradecimentos](#autor-contribuição-e-agradecimentos)
 - [Referências](#referências)
 
@@ -55,6 +55,13 @@ Transforme seus processos em **serviços integráveis**, permitindo que outras a
 ### [Utilizando o Job Execution como Interface](/languages/pt-BR/topicos/jobexec-como-interface.md)
 
 Crie **interfaces customizadas, interativas e inteligentes** utilizando **HTML, CSS e JavaScript** dentro do JES. Isso permite a construção de dashboards, formulários interativos e aplicações personalizadas para manipulação de dados diretamente na plataforma SAS.
+
+## Tópicos Avançados e Casos Práticos
+
+Aqui você encontra dicas e soluções para desafios comuns do dia a dia usando SAS Viya:
+
+- [Como passar parâmetros via sessionStorage (funciona no SAS Visual Investigator)](languages/pt-BR/topicos-avancados/parametros-sessionStorage-no-visual-investigator.md)
+- [Como criar um PDF customizado para impressão no SAS Visual Analytics](languages/pt-BR/topicos-avancados/pdf-customizado-no-visual-analytics.md)
 
 ## Autor, Contribuição e Agradecimentos
 
